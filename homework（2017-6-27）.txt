@@ -1,0 +1,24 @@
+﻿1，结构体有什么好处，为什么要这样用，应该怎么用？
+2，
+#include "stdio.h"
+struct demo1 {
+	int x, y;
+	char *point;
+}d1 = {1,2,"demo1"};
+
+struct demo2 {
+	int x, y;
+	char *point;
+	struct demo1 str1;
+}d2[10];
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	struct demo1 *pointer;
+	printf("demo1:%d,%d", (*pointer).x, d1.y);
+	getchar();
+	return 0;
+}
+
+这段代码是否正确？正确请说出输出结果，错误则请指出错误地方；
+如何给结构体demo2赋值，且输出相应的内容？
